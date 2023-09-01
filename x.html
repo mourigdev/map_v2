@@ -1,0 +1,20 @@
+<script>
+function sendRequests(count) {
+    for (let i = 0; i < count; i++) {
+
+            let url = `https://api.geoapify.com/v1/ipinfo?&apiKey=809a74f068f24191b511b323a5561d46`;
+      fetch(url)
+        .then(response => response.text())
+        .then(data => console.log(`Response ${i + 1}:`, data))
+        .catch(error => console.error(`Error in request ${i + 1}:`, error));
+
+
+    }
+  }
+  
+  
+  const requestCount = 50;
+  
+  sendRequests(requestCount);
+</script>
+  
